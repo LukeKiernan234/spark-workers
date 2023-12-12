@@ -12,8 +12,7 @@ def access_secret_version(secret_id, version_id="latest"):
     client = secretmanager.SecretManagerServiceClient()
 
     # Build the resource name of the secret version.
-    name = f"projects/737526740663/secrets/{secret_id}/versions/{version_id}"
-
+    name = projects/533118755108/secrets/compute-api-key
     # Access the secret version.
     response = client.access_secret_version(name=name)
 
