@@ -12,9 +12,9 @@
       "deviceName": "slave1",
       "initializeParams": {
         "diskSizeGb": "10",
-        "diskType": "projects/spark-407917/zones/us-west4-b/diskTypes/pd-balanced",
+        "diskType": "projects/spark-407917/zones/europe-west1-b/diskTypes/pd-standard",
         "labels": {},
-        "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20221102"
+        "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20231115"
       },
       "mode": "READ_WRITE",
       "type": "PERSISTENT"
@@ -24,8 +24,11 @@
     "enableDisplay": false
   },
   "guestAccelerators": [],
+  "instanceEncryptionKey": {},
   "keyRevocationActionType": "STOP",
-  "labels": {},
+  "labels": {
+    "goog-ec-src": "vm_add-rest"
+  },
   "machineType": "projects/spark-407917/zones/europe-west1-b/machineTypes/e2-medium",
   "metadata": {
     "items": [
@@ -48,6 +51,9 @@
       "subnetwork": "projects/spark-407917/regions/europe-west1/subnetworks/default"
     }
   ],
+  "params": {
+    "resourceManagerTags": {}
+  },
   "reservationAffinity": {
     "consumeReservationType": "ANY_RESERVATION"
   },
@@ -59,7 +65,7 @@
   },
   "serviceAccounts": [
     {
-      "email": "569439294570-compute@developer.gserviceaccount.com",
+      "email": "737526740663-compute@developer.gserviceaccount.com",
       "scopes": [
         "https://www.googleapis.com/auth/devstorage.read_only",
         "https://www.googleapis.com/auth/logging.write",
