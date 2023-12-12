@@ -24,8 +24,11 @@
     "enableDisplay": false
   },
   "guestAccelerators": [],
+  "instanceEncryptionKey": {},
   "keyRevocationActionType": "STOP",
-  "labels": {},
+  "labels": {
+     "goog-ec-src": "vm_add-rest"
+  },
   "machineType": "projects/spark-407917/zones/europe-west1-b/machineTypes/e2-medium",
   "metadata": {
     "items": [
@@ -48,6 +51,9 @@
       "subnetwork": "projects/spark-407917/regions/europe-west1/subnetworks/default"
     }
   ],
+    "params": {
+    "resourceManagerTags": {}
+  },
   "reservationAffinity": {
     "consumeReservationType": "ANY_RESERVATION"
   },
