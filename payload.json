@@ -1,3 +1,4 @@
+
 {
   "canIpForward": false,
   "confidentialInstanceConfig": {
@@ -9,7 +10,7 @@
     {
       "autoDelete": true,
       "boot": true,
-      "deviceName": "slave1",
+      "deviceName": "slave-1",
       "initializeParams": {
         "diskSizeGb": "10",
         "diskType": "projects/spark-407917/zones/europe-west1-b/diskTypes/pd-standard",
@@ -38,7 +39,7 @@
       }
     ]
   },
-  "name": "slave1",
+  "name": "slave-1",
   "networkInterfaces": [
     {
       "accessConfigs": [
@@ -65,7 +66,7 @@
   },
   "serviceAccounts": [
     {
-      "email": "737526740663-compute@developer.gserviceaccount.com",
+      "email": "533118755108-compute@developer.gserviceaccount.com",
       "scopes": [
         "https://www.googleapis.com/auth/devstorage.read_only",
         "https://www.googleapis.com/auth/logging.write",
