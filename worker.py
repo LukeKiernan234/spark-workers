@@ -12,7 +12,8 @@ def access_secret_version(secret_id, version_id="latest"):
     client = secretmanager.SecretManagerServiceClient()
 
     # Build the resource name of the secret version.
-    name = projects/533118755108/secrets/compute-api-key
+    name = f"projects/737526740663/secrets/{secret_id}/versions/{version_id}"
+
     # Access the secret version.
     response = client.access_secret_version(name=name)
 
@@ -43,7 +44,7 @@ def addWorker(token, num):
       tdata=json.load(p)
     tdata['name']='slave'+str(num)
     data=json.dumps(tdata)
-    url='https://www.googleapis.com/compute/v1/projects/spark-407917/zones/europe-west1-b/instances'
+    url='https://www.googleapis.com/compute/v1/projects/elaborate-scope-401116/zones/europe-west1-b/instances'
     headers={"Authorization": "Bearer "+token}
     resp=requests.post(url,headers=headers, data=data)
     if resp.status_code==200:     
