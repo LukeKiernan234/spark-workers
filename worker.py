@@ -12,7 +12,7 @@ def access_secret_version(secret_id, version_id="latest"):
     client = secretmanager.SecretManagerServiceClient()
 
     # Build the resource name of the secret version.
-    name = f"projects/737526740663/secrets/{secret_id}/versions/{version_id}"
+    name = f"projects/533118755108/secrets/{secret_id}/versions/{version_id}"
 
     # Access the secret version.
     response = client.access_secret_version(name=name)
@@ -32,7 +32,7 @@ def test():
 @app.route("/add",methods=['GET','POST'])
 def add():
   if request.method=='GET':
-    return render_template('add_form.html')
+    return "Use post method"
   else:
     token=access_secret_version("compute-api-key")
     ret = addWorker(token,request.form['num'])
@@ -44,7 +44,7 @@ def addWorker(token, num):
       tdata=json.load(p)
     tdata['name']='slave'+str(num)
     data=json.dumps(tdata)
-    url='https://www.googleapis.com/compute/v1/projects/elaborate-scope-401116/zones/europe-west1-b/instances'
+    url='https://www.googleapis.com/compute/v1/projects/spark-407917/zones/europe-west1-b/instances'
     headers={"Authorization": "Bearer "+token}
     resp=requests.post(url,headers=headers, data=data)
     if resp.status_code==200:     
